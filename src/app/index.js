@@ -324,6 +324,6 @@ Promise.all([georgeX.load(null, timeout), suisseBP.load(null, timeout)])
   });
 
 console.log(
-  '%c Developed by Bizarro - https://bizar.ro/',
+  '%c Amuse toi bien',
   'background: #000; color: #fff;',
 );

@@ -27,7 +27,7 @@
       each collection, index in prismic.collection
         article.collections__article(class=`${index === 0 ? 'collections__article--active' : ''}`)
           h2.collections__article__title
-            span.collections__article__title__text=`${collection.data.title} ${prismic.home.data.collection}`
+            span.collections__article__title__text=`${collection.data.title}`
 
           p.collections__article__description!=collection.data.description.replace(/\n/g, '<br>')
 
@@ -53,7 +53,7 @@
             .detail__information__highlights
               each highlight in product.data.highlights
                 p.detail__information__highlight
-                  if highlight.highlights_icon.toLowerCase() == 'arrow'
+                  if highlight.highlights_icon == 'arrow'
                     svg.detail__information__highlight__icon.detail__information__highlight__icon--arrow(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40")
                       path(stroke="#fff" d="M14.84,25.46l11.31-11.31")
                       path(fill="#fff" d="M30.75,9.55l-0.66,2.36l-0.05,2.59l-1.93-2.31l-2.31-1.93l2.59-0.05L30.75,9.55z")
